@@ -12,6 +12,7 @@ class BusinessController extends GetxController {
     update();
     var response = await businesData.getData();
     if (response is Map<String, dynamic>) {
+      business = [];
       business.addAll(response['articles']);
       failure = Failure.success;
       update();

@@ -12,6 +12,7 @@ class SportsController extends GetxController {
     update();
     var response = await sportsData.getData();
     if (response is Map<String, dynamic>) {
+      sports = [];
       sports.addAll(response['articles']);
       failure = Failure.success;
       update();

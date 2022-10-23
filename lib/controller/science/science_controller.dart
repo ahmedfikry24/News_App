@@ -12,6 +12,7 @@ class ScienceController extends GetxController {
     update();
     var response = await scienceData.getData();
     if (response is Map<String, dynamic>) {
+      science = [];
       science.addAll(response['articles']);
       failure = Failure.success;
       update();
